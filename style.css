@@ -1,0 +1,22 @@
+#container {
+    margin:auto;
+    width: 50%;
+}
+.mainDiv {
+    /*     border: 1px blue solid;*/
+    
+    flex-direction: row;
+    display: flex;
+    height: 32px;
+    width: 480px;
+    /* margin: 1px;*/
+}
+
+.minorDiv {
+    border: 1px red solid;
+    flex-direction:column ;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    /* margin: 1px;*/
+}
