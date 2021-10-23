@@ -1,6 +1,17 @@
+
+#btn {
+    
+    margin:10px auto;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: large;
+}
 #container {
-    margin:auto;
-    width: 50%;
+    margin:30px auto;
+    width: 960px;
 }
 .mainDiv {
     /*     border: 1px blue solid;*/
@@ -8,7 +19,7 @@
     flex-direction: row;
     display: flex;
     height: 32px;
-    width: 480px;
+    width: 960px;
     /* margin: 1px;*/
 }
 
@@ -19,4 +30,22 @@
     height: 30px;
     width: 30px;
     /* margin: 1px;*/
+    
 }
+
+/*
+.minorDiv:hover {
+    background: #3a12a8 ;
+    margin: 1px;
+} 
+
+*/
+
+.minorDivHover{
+    background: #3a12a8 ;
+    margin: 1px;
+    
+
+    
+
+} 

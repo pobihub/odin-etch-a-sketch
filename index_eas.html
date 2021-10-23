@@ -8,301 +8,49 @@
     <link rel= "stylesheet"; href="style.css">
 </head>
 <body>
+    <button id=btn>Reset the Grid</button>
     <div id="container">
 
     </div>
 </body>
     <script>
+        const button = document.querySelector('#btn');
+        button.addEventListener('click', () => {
+            let squareNum = prompt('Select number of squares in the grid');
+            if (squareNum < 100 ) {
+                createDiv(squareNum);
+            }
+            else alert('Number of squares should be less than 100');              
+                       
+        });
+          
         const container = document.querySelector('#container');
-        function createDiv() {
-            for(i=0;i<16; i++) {
+        let mainDiv;
+        let minorDiv;
+        function createDiv(sqNum) {
+            for(i=0;i<sqNum; i++) {
                 let mainDiv = document.createElement('div');
                 mainDiv.className = "mainDiv";
                 //mainDiv.textContent = " ";
                 container.appendChild(mainDiv);
-                for(j=0;j<16;j++) {
+                for(j=0;j<sqNum;j++) {
                     let minorDiv = document.createElement('div');
                     minorDiv.className = "minorDiv";
-                    mainDiv.appendChild(minorDiv);
+                    minorDiv.addEventListener('mouseover', e => e.target.classList.add('minorDivHover'));                    mainDiv.appendChild(minorDiv);
                     //mainDiv.textContent = " ";
-                }
+                   //return minorDiv
+                       }
+                
             }
-            
+                 
+        //     minorDiv.addEventListerner('hover', () => {
+        // minorDiv.setAttribute('style', 'background:blue');
+        // });
+                 
         }
-        createDiv();
-
-        // const Div1 = document.createElement('div');
-        //     const div11 = document.createElement('div');
-        //     const div12 = document.createElement('div');
-        //     const div13 = document.createElement('div');
-        //     const div14 = document.createElement('div');
-        //     const div15 = document.createElement('div');
-        //     const div16 = document.createElement('div');
-        //     const div17 = document.createElement('div');
-        //     const div18 = document.createElement('div');
-        //     const div19 = document.createElement('div');
-        //     const div110 = document.createElement('div');
-        //     const div111 = document.createElement('div');
-        //     const div112 = document.createElement('div');
-        //     const div113 = document.createElement('div');
-        //     const div114 = document.createElement('div');
-        //     const div115 = document.createElement('div');
-        //     const div116 = document.createElement('div');
-        // const Div2 = document.createElement('div');
-        //     const div21 = document.createElement('div');
-        //     const div22 = document.createElement('div');
-        //     const div23 = document.createElement('div');
-        //     const div24 = document.createElement('div');
-        //     const div25 = document.createElement('div');
-        //     const div26 = document.createElement('div');
-        //     const div27 = document.createElement('div');
-        //     const div28 = document.createElement('div');
-        //     const div29 = document.createElement('div');
-        //     const div210 = document.createElement('div');
-        //     const div211 = document.createElement('div');
-        //     const div212 = document.createElement('div');
-        //     const div213 = document.createElement('div');
-        //     const div214 = document.createElement('div');
-        //     const div215 = document.createElement('div');
-        //     const div216 = document.createElement('div');
-        // const Div3 = document.createElement('div');
-        //     const div31 = document.createElement('div');
-        //     const div32 = document.createElement('div');
-        //     const div33 = document.createElement('div');
-        //     const div34 = document.createElement('div');
-        //     const div35 = document.createElement('div');
-        //     const div36 = document.createElement('div');
-        //     const div37 = document.createElement('div');
-        //     const div38 = document.createElement('div');
-        //     const div39 = document.createElement('div');
-        //     const div310 = document.createElement('div');
-        //     const div311 = document.createElement('div');
-        //     const div312 = document.createElement('div');
-        //     const div313 = document.createElement('div');
-        //     const div314 = document.createElement('div');
-        //     const div315 = document.createElement('div');
-        //     const div316 = document.createElement('div');
-        // const Div4 = document.createElement('div');
-        //     const div41 = document.createElement('div');
-        //     const div42 = document.createElement('div');
-        //     const div43 = document.createElement('div');
-        //     const div44 = document.createElement('div');
-        //     const div45 = document.createElement('div');
-        //     const div46 = document.createElement('div');
-        //     const div47 = document.createElement('div');
-        //     const div48 = document.createElement('div');
-        //     const div49 = document.createElement('div');
-        //     const div410 = document.createElement('div');
-        //     const div411 = document.createElement('div');
-        //     const div412 = document.createElement('div');
-        //     const div413 = document.createElement('div');
-        //     const div414 = document.createElement('div');
-        //     const div415 = document.createElement('div');
-        //     const div416 = document.createElement('div');
-        // const Div5 = document.createElement('div');
-        //     const div51 = document.createElement('div');
-        //     const div52 = document.createElement('div');
-        //     const div53 = document.createElement('div');
-        //     const div54 = document.createElement('div');
-        //     const div55 = document.createElement('div');
-        //     const div56 = document.createElement('div');
-        //     const div57 = document.createElement('div');
-        //     const div58 = document.createElement('div');
-        //     const div59 = document.createElement('div');
-        //     const div510 = document.createElement('div');
-        //     const div511 = document.createElement('div');
-        //     const div512 = document.createElement('div');
-        //     const div513 = document.createElement('div');
-        //     const div514 = document.createElement('div');
-        //     const div515 = document.createElement('div');
-        //     const div516 = document.createElement('div');
-        // const Div6 = document.createElement('div');
-        //     const div61 = document.createElement('div');
-        //     const div62 = document.createElement('div');
-        //     const div63 = document.createElement('div');
-        //     const div64 = document.createElement('div');
-        //     const div65 = document.createElement('div');
-        //     const div66 = document.createElement('div');
-        //     const div67 = document.createElement('div');
-        //     const div68 = document.createElement('div');
-        //     const div69 = document.createElement('div');
-        //     const div610 = document.createElement('div');
-        //     const div611 = document.createElement('div');
-        //     const div612 = document.createElement('div');
-        //     const div613 = document.createElement('div');
-        //     const div614 = document.createElement('div');
-        //     const div615 = document.createElement('div');
-        //     const div616 = document.createElement('div');
-        // const Div7 = document.createElement('div');
-        //     const div71 = document.createElement('div');
-        //     const div72 = document.createElement('div');
-        //     const div73 = document.createElement('div');
-        //     const div74 = document.createElement('div');
-        //     const div75 = document.createElement('div');
-        //     const div76 = document.createElement('div');
-        //     const div77 = document.createElement('div');
-        //     const div78 = document.createElement('div');
-        //     const div79 = document.createElement('div');
-        //     const div710 = document.createElement('div');
-        //     const div711 = document.createElement('div');
-        //     const div712 = document.createElement('div');
-        //     const div713 = document.createElement('div');
-        //     const div714 = document.createElement('div');
-        //     const div715 = document.createElement('div');
-        //     const div716 = document.createElement('div');
-        // const Div8 = document.createElement('div');
-        //     const div81 = document.createElement('div');
-        //     const div82 = document.createElement('div');
-        //     const div83 = document.createElement('div');
-        //     const div84 = document.createElement('div');
-        //     const div85 = document.createElement('div');
-        //     const div86 = document.createElement('div');
-        //     const div87 = document.createElement('div');
-        //     const div88 = document.createElement('div');
-        //     const div89 = document.createElement('div');
-        //     const div810 = document.createElement('div');
-        //     const div811 = document.createElement('div');
-        //     const div812 = document.createElement('div');
-        //     const div813 = document.createElement('div');
-        //     const div814 = document.createElement('div');
-        //     const div815 = document.createElement('div');
-        //     const div816 = document.createElement('div');
-        // const Div9 = document.createElement('div');
-        //     const div91 = document.createElement('div');
-        //     const div92 = document.createElement('div');
-        //     const div93 = document.createElement('div');
-        //     const div94 = document.createElement('div');
-        //     const div95 = document.createElement('div');
-        //     const div96 = document.createElement('div');
-        //     const div97 = document.createElement('div');
-        //     const div98 = document.createElement('div');
-        //     const div99 = document.createElement('div');
-        //     const div910 = document.createElement('div');
-        //     const div911 = document.createElement('div');
-        //     const div912 = document.createElement('div');
-        //     const div913 = document.createElement('div');
-        //     const div914 = document.createElement('div');
-        //     const div915 = document.createElement('div');
-        //     const div916 = document.createElement('div');
-        // const Div10 = document.createElement('div');
-        //     const div101 = document.createElement('div');
-        //     const div102 = document.createElement('div');
-        //     const div103 = document.createElement('div');
-        //     const div104 = document.createElement('div');
-        //     const div105 = document.createElement('div');
-        //     const div106 = document.createElement('div');
-        //     const div107 = document.createElement('div');
-        //     const div108 = document.createElement('div');
-        //     const div109 = document.createElement('div');
-        //     const div1010 = document.createElement('div');
-        //     const div1011 = document.createElement('div');
-        //     const div1012 = document.createElement('div');
-        //     const div1013 = document.createElement('div');
-        //     const div1014 = document.createElement('div');
-        //     const div1015 = document.createElement('div');
-        //     const div1016 = document.createElement('div');
-        // const Div11 = document.createElement('div');
-        //     const div111 = document.createElement('div');
-        //     const div112 = document.createElement('div');
-        //     const div113 = document.createElement('div');
-        //     const div114 = document.createElement('div');
-        //     const div115 = document.createElement('div');
-        //     const div116 = document.createElement('div');
-        //     const div117 = document.createElement('div');
-        //     const div118 = document.createElement('div');
-        //     const div119 = document.createElement('div');
-        //     const div1110 = document.createElement('div');
-        //     const div1111 = document.createElement('div');
-        //     const div1112 = document.createElement('div');
-        //     const div1113 = document.createElement('div');
-        //     const div1114 = document.createElement('div');
-        //     const div1115 = document.createElement('div');
-        //     const div1116 = document.createElement('div');
-        // const Div12 = document.createElement('div');
-        //     const div121 = document.createElement('div');
-        //     const div122 = document.createElement('div');
-        //     const div123 = document.createElement('div');
-        //     const div124 = document.createElement('div');
-        //     const div125 = document.createElement('div');
-        //     const div126 = document.createElement('div');
-        //     const div127 = document.createElement('div');
-        //     const div128 = document.createElement('div');
-        //     const div129 = document.createElement('div');
-        //     const div1210 = document.createElement('div');
-        //     const div1211 = document.createElement('div');
-        //     const div1212 = document.createElement('div');
-        //     const div1213 = document.createElement('div');
-        //     const div1214 = document.createElement('div');
-        //     const div1215 = document.createElement('div');
-        //     const div1216 = document.createElement('div');
-        // const Div13 = document.createElement('div');
-        //     const div131 = document.createElement('div');
-        //     const div132 = document.createElement('div');
-        //     const div133 = document.createElement('div');
-        //     const div134 = document.createElement('div');
-        //     const div135 = document.createElement('div');
-        //     const div136 = document.createElement('div');
-        //     const div137 = document.createElement('div');
-        //     const div138 = document.createElement('div');
-        //     const div139 = document.createElement('div');
-        //     const div1310 = document.createElement('div');
-        //     const div1311 = document.createElement('div');
-        //     const div1312 = document.createElement('div');
-        //     const div1313 = document.createElement('div');
-        //     const div1314 = document.createElement('div');
-        //     const div1315 = document.createElement('div');
-        //     const div1316 = document.createElement('div');
-        // const Div14 = document.createElement('div');
-        //     const div141 = document.createElement('div');
-        //     const div142 = document.createElement('div');
-        //     const div143 = document.createElement('div');
-        //     const div144 = document.createElement('div');
-        //     const div125 = document.createElement('div');
-        //     const div146 = document.createElement('div');
-        //     const div147 = document.createElement('div');
-        //     const div148 = document.createElement('div');
-        //     const div149 = document.createElement('div');
-        //     const div1410 = document.createElement('div');
-        //     const div1411 = document.createElement('div');
-        //     const div1412 = document.createElement('div');
-        //     const div1413 = document.createElement('div');
-        //     const div1414 = document.createElement('div');
-        //     const div1415 = document.createElement('div');
-        //     const div1416 = document.createElement('div');
-        // const Div15 = document.createElement('div');
-        //     const div151 = document.createElement('div');
-        //     const div152 = document.createElement('div');
-        //     const div153 = document.createElement('div');
-        //     const div154 = document.createElement('div');
-        //     const div155 = document.createElement('div');
-        //     const div156 = document.createElement('div');
-        //     const div157 = document.createElement('div');
-        //     const div158 = document.createElement('div');
-        //     const div159 = document.createElement('div');
-        //     const div1510 = document.createElement('div');
-        //     const div1511 = document.createElement('div');
-        //     const div1512 = document.createElement('div');
-        //     const div1513 = document.createElement('div');
-        //     const div1514 = document.createElement('div');
-        //     const div1515 = document.createElement('div');
-        //     const div1516 = document.createElement('div');
-        // const Div16 = document.createElement('div');
-        //     const div161 = document.createElement('div');
-        //     const div162 = document.createElement('div');
-        //     const div163 = document.createElement('div');
-        //     const div164 = document.createElement('div');
-        //     const div165 = document.createElement('div');
-        //     const div166 = document.createElement('div');
-        //     const div167 = document.createElement('div');
-        //     const div168 = document.createElement('div');
-        //     const div169 = document.createElement('div');
-        //     const div1610 = document.createElement('div');
-        //     const div1611 = document.createElement('div');
-        //     const div1612 = document.createElement('div');
-        //     const div1613 = document.createElement('div');
-        //     const div1614 = document.createElement('div');
-        //     const div1615 = document.createElement('div');
-        //     const div1616 = document.createElement('div');
-
+         
+        
+        createDiv();  
+     
     </script>
 </html>
